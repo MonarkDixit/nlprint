@@ -1,7 +1,8 @@
 # NLPrint: Amazon Review Authenticity Detector
 
 **Course:** MSML606 - Data Structures and Algorithms, Spring 2026  
-**Author:** Monark Dixit (UID: 122259645) | Group 13
+**Author:** Monark Dixit (UID: 122259645) | Group 13 
+
 **Submission:** HW3 Extra Credit  
 **Dataset:** McAuley-Lab/Amazon-Reviews-2023 (All_Beauty, 10,000+ records)
 
