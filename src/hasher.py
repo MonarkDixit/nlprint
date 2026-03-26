@@ -75,11 +75,17 @@ class UniversalHashFunction:
     def hash_int(self, x: int) -> int:      #Hashes an integer x to a bucket index in [0, table_size). Formula: h(x) = ((a * x + b) mod p) mod table_size
         return ((self.a * x + self.b) % self.p) % self.table_size
 
-    def hash_string(self, s: str) -> int:       #Hashes a string to a bucket index in [0, table_size).
-        #Convert string to a non-negative integer. We use the built-in hash as a pre-hash step, then apply our universal function on top. This gives us the universal collision
-        #probability guarantee on top of Python's string hash distribution.
-        int_val = abs(hash(s)) & 0x7FFFFFFF   #mask to 31 bits
-        return self.hash_int(int_val)
+    def hash_string(self, s: str) -> int:
+        #FNV-1a 32-bit hash constants
+        FNV_PRIME = 16777619
+        FNV_OFFSET = 2166136261
+
+        h = FNV_OFFSET
+        for byte in s.encode("utf-8"):
+            h ^= byte
+            h = (h * FNV_PRIME) & 0xFFFFFFFF  # keep to 32 bits
+
+        return self.hash_int(h)
 
     def __repr__(self):
         return (

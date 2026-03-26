@@ -41,7 +41,7 @@ DEFAULT_TOP_N = 5
 TIMESTAMP_PROXIMITY_THRESHOLD = 86400  #24 hours in seconds
 
 #Minimum Jaccard similarity to include a result in the output. Results below this threshold are too dissimilar to be interesting.
-MIN_SIMILARITY_THRESHOLD = 0.05
+MIN_SIMILARITY_THRESHOLD = 0.01
 
 
 #METADATA FLAG DETECTION

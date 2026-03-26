@@ -179,7 +179,7 @@ st.markdown("""
     /* Submit button */
     .stButton button {
         background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) !important;
-        color: white !important;
+        color: #ffffff !important;
         border: none !important;
         border-radius: 8px !important;
         font-family: 'Space Mono', monospace !important;
@@ -189,6 +189,8 @@ st.markdown("""
         letter-spacing: 0.05em !important;
         transition: opacity 0.2s !important;
         width: 100%;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.4) !important;
+        -webkit-text-fill-color: #ffffff !important;
     }
     .stButton button:hover {
         opacity: 0.9 !important;

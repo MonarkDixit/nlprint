@@ -67,7 +67,16 @@ class MinHasher:        #Generates MinHash signatures for shingle sets.
 
         #Pre-convert all shingles to their integer hash keys once. This avoids re-hashing the same string k times. 
         #We use abs(hash(s)) & 0x7FFFFFFF as the pre-hash step, consistent with UniversalHashFunction.hash_string().
-        shingle_ints = [abs(hash(s)) & 0x7FFFFFFF for s in shingles]
+        FNV_PRIME = 16777619
+        FNV_OFFSET = 2166136261
+
+        shingle_ints = []
+        for s in shingles:
+            h = FNV_OFFSET
+            for byte in s.encode("utf-8"):
+                h ^= byte
+                h = (h * FNV_PRIME) & 0xFFFFFFFF
+            shingle_ints.append(h)
 
         #For each hash function, find the minimum hash value over all shingles. This is the core MinHash computation.
         signature = []
