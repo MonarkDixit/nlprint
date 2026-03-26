@@ -98,9 +98,9 @@ def download_dataset():         #Downloads the All_Beauty category from McAuley-
     return JSONL_PATH
 
 
-# audit_dataset()
-# Reads the saved JSONL file and prints a detailed quality report.
-# This satisfies the Phase 1 requirement to audit raw data before processing.
+#audit_dataset()
+#Reads the saved JSONL file and prints a detailed quality report.
+#This satisfies the Phase 1 requirement to audit raw data before processing.
 
 def audit_dataset():        #Reads the local JSONL file and prints a full audit reporting data quality issues, missing fields, rating distribution, and sample records.
 
