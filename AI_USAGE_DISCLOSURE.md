@@ -6,13 +6,10 @@
 
 ---
 
-AI assistance (Claude) was used in this project for the
-following:
+AI assistance (Claude) was utilized during the development of this project in accordance with course guidelines. Specifically, AI tools were referenced for the following:
 
-- Understanding Feature Hashing and MinHashing Concepts 
-- Building the Streamlit UI (app.py)
+ - Conceptual Exploration: Clarifying the mathematical principles and theories behind Feature Hashing and MinHash signatures.
 
-All algorithm logic, data structures, and implementation decisions were
-understood and written by me. The project proposal, README, and this
-disclosure was also written by me. The conceptual direction, dataset choice,
-and overall system design are my own.
+ - User Interface Development: Building the Streamlit application layout and frontend components within app.py, which is permitted under the course policy for the UI layer.
+
+All core algorithmic logic, custom data structures, and implementation decisions were independently authored and fully understood by me. The conceptual direction, dataset selection, system architecture, project proposal, and all written documentation remain entirely my original work.
